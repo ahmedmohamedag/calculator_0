@@ -1,6 +1,6 @@
 # calculator
 
-### Hi ther
+### Hi there!
 
 I did this `project` two years ago when I first started learning.
 used in it :

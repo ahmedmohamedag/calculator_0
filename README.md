@@ -1,6 +1,6 @@
 # calculator
 
-### Hi there!
+>### Hi there!
 
 I did this `project` two years ago when I first started learning.
 used in it :
@@ -11,6 +11,7 @@ Css
 Bootstrap
 Js
 ```
+>Preview [Link](https://ahmedmohamedag.github.io/calculator_0/) 
 
 ![Calculator](https://github.com/ahmedmohamedag/calculator_0/assets/145150395/cf53dbe4-cca7-4f8e-b6ba-b82e031bbbc6)
 

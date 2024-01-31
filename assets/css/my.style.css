@@ -1,0 +1,123 @@
+
+body{
+    background: linear-gradient(to top,#01012e,#240019);
+}
+
+#hid{
+display: none;
+}
+#calc{
+    display: none;
+} 
+
+.form-control-1{
+    display: inline-block;
+    width: 50%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(33 37 41);
+    background-color: rgb(255 255 255);
+    background-clip: padding-box;
+    border: 1px solid rgb(206 212 218);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+
+
+
+    /* pointer-events: none; */
+}
+
+.bb{
+    height: 50px;
+}
+
+.lein-after::after{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: firebrick;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btnn{
+    /* background-color:; */
+    border-radius : 20px;
+    border: none;
+    padding: 5px 20px;
+}
+/* .btnn:focus{
+    background-color: yellowgreen;
+} */
+
+
+.w-c{
+    width: 80px;
+}
+
+.btn-clc{
+    width: 20%;
+    padding: 5px 10px;
+}
+.hei ,#totale_d{
+    height: 33px;
+    font-size: 20px;
+    /* width: 50%; */
+    /* flex-wrap: wrap; */
+
+    /* margin-bottom: 10px; */
+}
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+.calc{
+padding-top: 10px;
+    box-shadow: 0 0 20px #eee;
+    width: 40%;
+}
+.buttons{
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.text_view{
+    pointer-events: none;
+    min-height: 50px;
+}
+.btn_top{
+    background-color: #d31336;
+    border: 2px solid #d313369a;
+    color: #fff;
+}
+.btn_operat{
+    background-color: #3a5ab1;
+    border: 2px solid #3a5ab16c;
+    color: #fff;
+}
+.btn_n{
+    width: 20%;
+    padding: 5px 0px;
+    transition: opacity 0.4s;
+    border: transparent;
+
+}
+.eq{
+    width: 45%;
+    background-color: #3a5ab1;
+    border : 2px solid transparent;
+    color: #fff;
+}
+.btn_n:hover{
+    opacity: 0.8;
+}
